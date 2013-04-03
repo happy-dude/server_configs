@@ -1,0 +1,108 @@
+
+!
+version 12.2
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+!
+hostname eastco-ro-01
+!
+aaa new-model
+aaa authentication login default local
+enable secret 5 $1$F6p8$Cdi2YXHRWcji72bAo1lY4.
+!
+username netAdmin privilege 15 password 7 15170822013E1B253B20072D06131311
+ip subnet-zero
+!
+!
+ip domain-name eastco.sa3
+!
+!
+call rsvp-sync
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.111.221.253 255.255.255.0
+ ip nat outside
+ duplex auto
+ speed auto
+!
+interface Serial0/0
+ no ip address
+ shutdown
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 10.10.10.254 255.255.255.0
+ ip nat inside
+!
+interface FastEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 10.10.20.254 255.255.255.0
+ ip helper-address 10.10.10.20
+ ip nat inside
+!
+interface FastEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 10.10.30.254 255.255.255.0
+ ip helper-address 10.10.10.20
+ ip nat inside
+!
+interface Serial0/1
+ no ip address
+ shutdown
+!
+!
+ip nat pool vlan10 10.111.221.250 10.111.221.250 prefix-length 24
+ip nat pool vlan20 10.111.221.251 10.111.221.251 prefix-length 24
+ip nat pool vlan30 10.111.221.252 10.111.221.252 prefix-length 24
+ip nat inside source list 10 pool vlan10 overload
+ip nat inside source list 20 pool vlan20 overload
+ip nat inside source list 30 pool vlan30 overload
+ip nat inside source static 10.10.20.10 10.111.221.10
+ip nat inside source static 10.10.20.20 10.111.221.20
+ip nat inside source static 10.10.20.30 10.111.221.30
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.111.221.254
+no ip http server
+!
+!
+!
+!
+!
+!
+!
+!
+!
+access-list 5 permit 10.10.10.0 0.0.0.255
+access-list 5 permit 10.10.30.0 0.0.0.255
+access-list 10 permit 10.10.10.0 0.0.0.255
+access-list 20 permit 10.10.20.0 0.0.0.255
+access-list 30 permit 10.10.30.0 0.0.0.255
+!
+!
+dial-peer cor custom
+!
+!
+!
+!
+!
+line con 0
+ password 7 050E071C356F41271C11001D1907
+line aux 0
+line vty 0 4
+ access-class 5 in
+ transport input ssh
+!
+end
