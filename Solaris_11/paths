@@ -4,3 +4,6 @@ Configuration Paths:
     * dns_secondary:    /etc/named.conf
                         /var/named
     * samba:            /etc/opt/csw/samba
+
+    * apache:		/etc/apache/2.2/httpd.conf
+			/var/apache/2.2/htdocs/index.html
