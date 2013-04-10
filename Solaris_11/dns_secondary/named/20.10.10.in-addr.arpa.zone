@@ -1,0 +1,15 @@
+$ORIGIN .
+$TTL 172800	; 2 days
+20.10.10.in-addr.arpa	IN SOA	lin-cent6-01.eastco.sa3. dnsemail.eastco.sa3. (
+				2013040400 ; serial
+				43200      ; refresh (12 hours)
+				900        ; retry (15 minutes)
+				1209600    ; expire (2 weeks)
+				3600       ; minimum (1 hour)
+				)
+			NS	lin-cent6-01.eastco.sa3.
+			NS	sol-11-01.eastco.sa3.
+$ORIGIN 20.10.10.in-addr.arpa.
+10			PTR	win-w2k8r2-01.eastco.sa3.
+20			PTR	lin-cent6-01.eastco.sa3.
+30			PTR	sol-11-01.eastco.sa3.

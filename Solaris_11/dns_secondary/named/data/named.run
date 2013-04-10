@@ -1,0 +1,178 @@
+zone 0.0.127.in-addr.arpa/IN/internalView: loaded serial 2013040400
+zone localhost/IN/internalView: loaded serial 2013040401
+running
+zone localhost/IN/internalView: sending notifies (serial 2013040401)
+zone 0.0.127.in-addr.arpa/IN/internalView: sending notifies (serial 2013040400)
+zone 10.10.10.in-addr.arpa/IN/internalView: Transfer started.
+transfer of '10.10.10.in-addr.arpa/IN/internalView' from 10.10.10.20#53: connected using 10.10.10.30#55099
+zone 10.10.10.in-addr.arpa/IN/internalView: transferred serial 2013040400
+transfer of '10.10.10.in-addr.arpa/IN/internalView' from 10.10.10.20#53: Transfer completed: 1 messages, 7 records, 246 bytes, 0.136 secs (1808 bytes/sec)
+zone 10.10.10.in-addr.arpa/IN/internalView: sending notifies (serial 2013040400)
+zone eastco.sa3/IN/internalView: Transfer started.
+zone 20.10.10.in-addr.arpa/IN/internalView: Transfer started.
+zone eastco.sa3/IN/externalView: Transfer started.
+transfer of 'eastco.sa3/IN/internalView' from 10.10.10.20#53: connected using 10.10.10.30#34204
+transfer of 'eastco.sa3/IN/externalView' from 10.10.20.20#53: connected using 10.10.20.30#49596
+transfer of '20.10.10.in-addr.arpa/IN/internalView' from 10.10.10.20#53: connected using 10.10.10.30#64136
+zone eastco.sa3/IN/externalView: transferred serial 2013040300
+transfer of 'eastco.sa3/IN/externalView' from 10.10.20.20#53: Transfer completed: 1 messages, 18 records, 440 bytes, 0.045 secs (9777 bytes/sec)
+zone eastco.sa3/IN/externalView: sending notifies (serial 2013040300)
+zone eastco.sa3/IN/internalView: transferred serial 2013040403
+transfer of 'eastco.sa3/IN/internalView' from 10.10.10.20#53: Transfer completed: 1 messages, 28 records, 667 bytes, 0.072 secs (9263 bytes/sec)
+zone eastco.sa3/IN/internalView: sending notifies (serial 2013040403)
+zone 20.10.10.in-addr.arpa/IN/internalView: transferred serial 2013040400
+transfer of '20.10.10.in-addr.arpa/IN/internalView' from 10.10.10.20#53: Transfer completed: 1 messages, 7 records, 246 bytes, 0.080 secs (3075 bytes/sec)
+zone 20.10.10.in-addr.arpa/IN/internalView: sending notifies (serial 2013040400)
+network unreachable resolving 'ns1.msft.net/A/IN': 2001:503:ba3e::2:30#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:503:c27::2:30#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:500:1::803f:235#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:dc3::35#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:7fd::1#53
+network unreachable resolving 'ns5.msft.net/A/IN': 2001:503:a83e::2:30#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2a01:111:2005::1:1#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2a01:111:2020::1:1#53
+network unreachable resolving 'ns4.msft.net/A/IN': 2a01:111:2006:6::1:1#53
+network unreachable resolving 'update.microsoft.com/A/IN': 2a01:111:200f:1::1:1#53
+network unreachable resolving 'update.microsoft.com/A/IN': 2404:f800:2003::1:1#53
+network unreachable resolving 'mozorg.dynect.mozilla.net/A/IN': 2001:503:231d::2:30#53
+network unreachable resolving 'mozorg.dynect.mozilla.net/A/IN': 2001:500:90:1::27#53
+network unreachable resolving 'ns3.p27.dynect.net/AAAA/IN': 2001:500:94::100#53
+network unreachable resolving 'ns3.p27.dynect.net/AAAA/IN': 2001:500:90::100#53
+network unreachable resolving 'pixel.quantserve.com/A/IN': 2600:1401:2::bc#53
+network unreachable resolving 'pixel.quantserve.com/A/IN': 2a02:26f0:67::64#53
+network unreachable resolving 'ns2-131.akadns.org/AAAA/IN': 2001:500:e::1#53
+network unreachable resolving 'ns3-131.akadns.org/A/IN': 2001:500:e::1#53
+network unreachable resolving 'ns6-131.akadns.org/AAAA/IN': 2001:500:f::1#53
+network unreachable resolving 'ns3-131.akadns.org/AAAA/IN': 2001:500:b::1#53
+network unreachable resolving 'ns17-133.akadns.org/A/IN': 2001:500:40::1#53
+network unreachable resolving 'ns6-131.akadns.org/AAAA/IN': 2001:500:48::1#53
+network unreachable resolving 'ns17-133.akadns.org/AAAA/IN': 2001:500:40::1#53
+network unreachable resolving 'b.g.turbobytes.com/A/IN': 2001:500:94:1::3#53
+network unreachable resolving 'b.g.turbobytes.com/A/IN': 2001:500:90:1::3#53
+network unreachable resolving 'linux-vserver.org/A/IN': 2001:500:c::1#53
+network unreachable resolving 'ns1.linux-vserver.at/A/IN': 2001:500:2f::f#53
+network unreachable resolving 'ns1.13thfloor.at/AAAA/IN': 2001:500:2f::f#53
+network unreachable resolving 'fred.ns.cloudflare.com/A/IN': 2400:cb00:2049:1::adf5:3b63#53
+network unreachable resolving 'jean.ns.cloudflare.com/AAAA/IN': 2400:cb00:2049:1::adf5:3a63#53
+network unreachable resolving 'www.palecrow.com/A/IN': 2001:503:231d::2:30#53
+network unreachable resolving 'dns2.easydns.net/AAAA/IN': 2001:503:a83e::2:30#53
+network unreachable resolving 'dns2.easydns.net/A/IN': 2001:1838:f001::10#53
+network unreachable resolving 'dns3.easydns.ca/AAAA/IN': 2001:500:83::1#53
+network unreachable resolving 'dns4.easydns.info/AAAA/IN': 2001:500:1a::1#53
+network unreachable resolving 'dns3.easydns.org/A/IN': 2620:49:a::10#53
+network unreachable resolving 'dns3.easydns.org/AAAA/IN': 2001:678:5::13#53
+network unreachable resolving 'ns4.cloud9.net/AAAA/IN': 2604:8d00:0:1::2#53
+network unreachable resolving 'ns4.cloud9.net/AAAA/IN': 2604:8d00:0:1::3#53
+network unreachable resolving 'ns2.cloud9.net/AAAA/IN': 2607:f0d0:1005:72::3#53
+network unreachable resolving 'ns2.cloud9.net/A/IN': 2001:620:8:4a6a::10:4#53
+network unreachable resolving 'wfe0.ysv.freebsd.org/A/IN': 2001:470:1a::1#53
+network unreachable resolving 'ns2.isc-sns.com/AAAA/IN': 2001:5a0:10::1#53
+network unreachable resolving 'ns4.eurodns.com/A/IN': 2001:b20:1001:11::242#53
+network unreachable resolving 'ns4.eurodns.com/A/IN': 2001:67c:1bc::100#53
+network unreachable resolving 'ns3.eurodns.com/AAAA/IN': 2001:41d0:2:e0e9::1#53
+network unreachable resolving 'bpfh.uuhost.uk.uu.net/A/IN': 2001:600:1c0:e001::35:2c#53
+network unreachable resolving 'ns1-d.dns.pipex.net/AAAA/IN': 2001:600:1c0:e000::35:1b#53
+network unreachable resolving 'www.usenix.org/A/IN': 2620:49:b::10#53
+network unreachable resolving 'iegalleryusa2.cloudapp.net/A/IN': 2a01:111:2005::2:1#53
+network unreachable resolving 'linuxtopia.org/A/IN': 2607:f208:302::14#53
+network unreachable resolving 'linuxtopia.org/A/IN': 2607:f208:206::14#53
+network unreachable resolving 'pdns5.ultradns.info/AAAA/IN': 2001:500:19::1#53
+network unreachable resolving 'pdns5.ultradns.info/AAAA/IN': 2001:500:1b::1#53
+network unreachable resolving 'pdns1.ultradns.net/AAAA/IN': 2001:502:f3ff::1#53
+network unreachable resolving 'pdns3.ultradns.org/A/IN': 2610:a1:1014::1#53
+network unreachable resolving 'pdns3.ultradns.org/AAAA/IN': 2001:502:4612::1#53
+network unreachable resolving 'pdns4.ultradns.org/A/IN': 2610:a1:1015::1#53
+network unreachable resolving 'pdns6.ultradns.co.uk/AAAA/IN': 2610:a1:1016::1#53
+network unreachable resolving 'pdns6.ultradns.co.uk/AAAA/IN': 2610:a1:1017::1#53
+network unreachable resolving 'abmr.net.edgesuite.net/A/IN': 2600:1401:2::2#53
+network unreachable resolving 'r.turn.com/A/IN': 2001:503:231d::2:30#53
+network unreachable resolving 'usw1.akam.net/A/IN': 2600:1406:1b::64#53
+network unreachable resolving 'asia3.akam.net/A/IN': 2600:1401:2::43#53
+network unreachable resolving 'usw1.akam.net/AAAA/IN': 2600:1401:2::43#53
+network unreachable resolving 'asia3.akam.net/AAAA/IN': 2600:1401:2::43#53
+network unreachable resolving 'usw1.akam.net/A/IN': 2600:1401:2::43#53
+network unreachable resolving 'asia3.akam.net/A/IN': 2600:1406:1b::64#53
+network unreachable resolving 'asia3.akam.net/AAAA/IN': 2600:1406:1b::64#53
+network unreachable resolving 'collectioncin-gtm2.nielsen.com/A/IN': 2001:503:a83e::2:30#53
+network unreachable resolving 'pixel.prod2.invitemedia.com/A/IN': 2001:500:90:1::24#53
+network unreachable resolving 'pixel.prod2.invitemedia.com/A/IN': 2001:500:94:1::24#53
+network unreachable resolving 'iad01-rtb.dotomi.com/A/IN': 2600:1401:2::13#53
+network unreachable resolving 'iad01-rtb.dotomi.com/A/IN': 2600:1401:2::50#53
+network unreachable resolving 'matcher-cwb.bidder7.mookie1.com/A/IN': 2a00:95c0:c000:5::53#53
+network unreachable resolving 'matcher-cwb.bidder7.mookie1.com/A/IN': 2620:107:c001:5::53#53
+network unreachable resolving 'ns1.p20.dynect.net/A/IN': 2001:500:90::100#53
+network unreachable resolving 'ns1.p20.dynect.net/A/IN': 2001:500:94::100#53
+network unreachable resolving 'm.xp1.ru4.com/A/IN': 2001:500:94:1::20#53
+network unreachable resolving 'px.owneriq.net/A/IN': 2600:1401:2::1#53
+network unreachable resolving 'px.owneriq.net/A/IN': 2600:1401:2::d0#53
+network unreachable resolving 'px.owneriq.net.edgekey.net/A/IN': 2600:1401:2::42#53
+network unreachable resolving 'ads.lucidmedia.com/A/IN': 2001:500:94:1::17#53
+network unreachable resolving 'ns-1987.awsdns-56.co.uk/A/IN': 2a01:40:1001:35::2#53
+network unreachable resolving 'ns-1987.awsdns-56.co.uk/AAAA/IN': 2001:630:181:35::83#53
+network unreachable resolving 'ns-1987.awsdns-56.co.uk/AAAA/IN': 2a01:40:1001:35::2#53
+network unreachable resolving 'b.voicefive.com/A/IN': 2600:1401:2::d5#53
+network unreachable resolving 'geo.tm.exelator.com/A/IN': 2001:500:90:1::20#53
+network unreachable resolving 'kona.kontera.com.edgesuite.net/A/IN': 2600:1401:2::41#53
+network unreachable resolving 'pixel.rubiconproject.com/A/IN': 2001:503:231d::2:30#53
+network unreachable resolving 'ns1.openprovider.nl/AAAA/IN': 2001:500:2e::1#53
+network unreachable resolving 'ns2.openprovider.be/A/IN': 2001:6a8:3c60::be#53
+network unreachable resolving 'ns2.openprovider.be/A/IN': 2001:678:4::a#53
+network unreachable resolving 'ns3.openprovider.eu/A/IN': 2001:678:4::13#53
+network unreachable resolving 'ns1.openprovider.nl/A/IN': 2a00:f10:11f::5#53
+network unreachable resolving 'ns3.openprovider.eu/A/IN': 2a02:348:8e:609b::155#53
+network unreachable resolving 'ns2.openprovider.be/AAAA/IN': 2a01:4f8:d13:2981::103#53
+network unreachable resolving 'exch.quantserve.com/A/IN': 2600:1401:2::5f#53
+network unreachable resolving 'twitter.com/A/IN': 2001:500:94:1::34#53
+network unreachable resolving 'www.googleadservices.com/A/IN': 2001:503:a83e::2:30#53
+network unreachable resolving 'clk.atdmt.com/A/IN': 2a01:111:2005::1:1#53
+network unreachable resolving 'clk.atdmt.com/A/IN': 2a01:111:2006:6::1:1#53
+network unreachable resolving 'h2.nstld.net/AAAA/IN': 2001:503:a83e::2:31#53
+network unreachable resolving 'e2.nstld.net/A/IN': 2001:503:83eb::2:31#53
+network unreachable resolving 'www.g-loaded.eu/A/IN': 2001:1470:8000:100::1#53
+network unreachable resolving 'www.g-loaded.eu/A/IN': 2001:67c:1010:23::53#53
+network unreachable resolving 'ns0.beasts.org/A/IN': 2a00:1098:0:80:1000::10#53
+client 10.111.251.10#24797: view externalView: query (cache) '30.20.10.10.in-addr.arpa/PTR/IN' denied
+network unreachable resolving 'ocsp.verisign.net/A/IN': 2001:503:5ae2:10ff::206#53
+network unreachable resolving 'ocsp.verisign.net/A/IN': 2001:502:8c25:10ff::206#53
+network unreachable resolving 'ocsp.verisign.net/A/IN': 2001:502:be98:10ff::206#53
+network unreachable resolving 'ocsp.verisign.net/A/IN': 2001:503:ff39:10ff::206#53
+network unreachable resolving 'ocsp.verisign.net/A/IN': 2001:503:f3da:10ff::206#53
+client 10.111.251.10#31723: view externalView: query (cache) '20.221.111.10.in-addr.arpa/A/IN' denied
+network unreachable resolving 'ns1156.dns.dyn.com/AAAA/IN': 2001:500:90:1::1#53
+network unreachable resolving 'ns4128.dns.dyn.com/A/IN': 2001:500:94:1::1#53
+network unreachable resolving 'd1.openx.org/A/IN': 2600:1401:2::fb#53
+network unreachable resolving 'cns3.secureserver.net/AAAA/IN': 2607:f208:303::64#53
+network unreachable resolving 'cns1.secureserver.net/A/IN': 2607:f208:207::64#53
+network unreachable resolving 'ocsp.starfieldtech.com/A/IN': 2607:f208:209::66#53
+network unreachable resolving 'u1.amazonaws.com/A/IN': 2001:503:231d::2:30#53
+network unreachable resolving 'jeremylq.wordpress.com/A/IN': 2001:503:a83e::2:30#53
+network unreachable resolving 'ns-1886.awsdns-43.co.uk/A/IN': 2001:502:ad09::3#53
+network unreachable resolving 'del.icio.us/A/IN': 2001:503:d1ae:ffff:ffff:ffff:ffff:ff7e#53
+network unreachable resolving 'del.icio.us/A/IN': 2001:503:e239::3:1#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2001:503:ba3e::2:30#53
+network unreachable resolving 'ns4.msft.net/A/IN': 2001:503:ba3e::2:30#53
+network unreachable resolving 'ns1.msft.net/AAAA/IN': 2001:500:2f::f#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:500:1::803f:235#53
+network unreachable resolving 'ns2.msft.net/A/IN': 2a01:111:2005::1:1#53
+network unreachable resolving 'ns2.msft.net/A/IN': 2a01:111:2006:6::1:1#53
+network unreachable resolving 'ns1.msft.net/AAAA/IN': 2404:f800:2003::1:1#53
+network unreachable resolving 'ns1.msft.net/A/IN': 2a01:111:2020::1:1#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2a01:111:200f:1::1:1#53
+network unreachable resolving 'dl.ms.d4p.net/A/IN': 2600:1401:2::89#53
+network unreachable resolving 'dl.ms.d4p.net/A/IN': 2600:1401:2::2a#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2001:500:1::803f:235#53
+network unreachable resolving 'ns4.msft.net/A/IN': 2001:7fd::1#53
+network unreachable resolving 'ns2.msft.net/AAAA/IN': 2001:500:2f::f#53
+network unreachable resolving 'ns3.msft.net/AAAA/IN': 2001:503:c27::2:30#53
+network unreachable resolving 'ns2.msft.net/AAAA/IN': 2001:500:1::803f:235#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2001:dc3::35#53
+network unreachable resolving 'ns4.msft.net/AAAA/IN': 2001:500:2f::f#53
+network unreachable resolving 'ns5.msft.net/AAAA/IN': 2001:503:ba3e::2:30#53
+network unreachable resolving 'ns4.msft.net/A/IN': 2001:dc3::35#53
+network unreachable resolving 'ns5.msft.net/AAAA/IN': 2001:503:c27::2:30#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2001:503:ba3e::2:30#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2a01:111:2006:6::1:1#53
+network unreachable resolving 'ns3.msft.net/A/IN': 2a01:111:2020::1:1#53
+network unreachable resolving 'ns5.msft.net/AAAA/IN': 2404:f800:2003::1:1#53
+network unreachable resolving 'ns5.msft.net/AAAA/IN': 2a01:111:2005::1:1#53
+network unreachable resolving 'ns5.msft.net/AAAA/IN': 2a01:111:200f:1::1:1#53

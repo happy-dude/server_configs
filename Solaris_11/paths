@@ -1,0 +1,6 @@
+Configuration Paths:
+
+    * ntp:              /etc/inet/ntp.conf
+    * dns_secondary:    /etc/named.conf
+                        /var/named
+    * samba:            /etc/opt/csw/samba

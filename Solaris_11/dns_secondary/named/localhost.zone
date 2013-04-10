@@ -1,0 +1,15 @@
+$TTL 172800
+$ORIGIN localhost.
+
+@     IN     SOA    lin-cent6-01.eastco.sa3.    dnsemail.eastco.sa3. (
+                    2013040401;
+                    43200;
+		    900;
+		    1209600;
+		    3600;
+		)
+
+@			NS	lin-cent6-01.eastco.sa3.
+@			NS	sol-11-01.eastco.sa3.
+
+@			A	127.0.0.1
