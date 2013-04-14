@@ -1,12 +1,19 @@
 Configuration Paths:
 
-    * samba:            /etc/opt/csw/samba/
-    * dns_secondary:    /etc/named.conf
-                        /var/named
-    * samba:            /etc/opt/csw/samba
+    * samba (fileshares):               /etc/samba/
+    * cswwinbind (AD authentication):   /etc/opt/csw/samba/
+    * krb5:                             /etc/krb5/
 
-    * apache:		/etc/apache/2.2/httpd.conf
-			/var/apache/2.2/htdocs/index.html
-    * ntp:              /etc/inet/ntp.conf
-    * krb5:             /etc/krb5/
-    * skel:             /etc/skel/
+    * dns_secondary:                    /etc/named.conf
+                                        /var/named
+
+    * backups:                          /root/backup_script.sh
+    * crontab (for root backups):       /var/spool/cron/crontabs/root
+
+    * apache:                           /etc/apache/2.2/httpd.conf
+                                        /var/apache/2.2/htdocs/index.html
+
+    * ntp:                              /etc/inet/ntp.conf
+
+
+    * skel:                             /etc/skel/
