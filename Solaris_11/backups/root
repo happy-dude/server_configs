@@ -1,0 +1,13 @@
+#ident	"%Z%%M%	%I%	%E% SMI"
+#
+# Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+# Use is subject to license terms.
+#
+# The root crontab should be used to perform accounting data collection.
+#
+#
+10 3 * * * /usr/sbin/logadm
+15 3 * * 0 [ -x /usr/lib/fs/nfs/nfsfind ] && /usr/lib/fs/nfs/nfsfind
+30 3 * * * [ -x /usr/lib/gss/gsscred_clean ] && /usr/lib/gss/gsscred_clean
+30 0,9,12,18,21 * * * /usr/lib/update-manager/update-refresh.sh
+0 2 * * *  /bin/bash /root/backup_script.sh

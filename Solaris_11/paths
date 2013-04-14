@@ -1,9 +1,12 @@
 Configuration Paths:
 
-    * ntp:              /etc/inet/ntp.conf
+    * samba:            /etc/opt/csw/samba/
     * dns_secondary:    /etc/named.conf
                         /var/named
     * samba:            /etc/opt/csw/samba
 
     * apache:		/etc/apache/2.2/httpd.conf
 			/var/apache/2.2/htdocs/index.html
+    * ntp:              /etc/inet/ntp.conf
+    * krb5:             /etc/krb5/
+    * skel:             /etc/skel/
