@@ -14,6 +14,9 @@ YESTERDAY=`/usr/gnu/bin/date -I -d "1 day ago"`
 HOMES_DIR="/homeShares/"
 OU_DIR="/ouShares/"
 
+#Location of backup logs
+LOG_DIR="/backups/logs"
+
 #The target directories:
 #TRG="/backup/website/$DAY0"
 HOMES_BACK="/backups/homeShares/$TODAY"
@@ -39,26 +42,50 @@ RSYNC="/opt/csw/bin/rsync"
 # Check if today is Sunday
 if [[ $(/usr/gnu/bin/date +%u) -eq 7 ]]; then
 
-	#echo "Today is Sunday"
-	# Mount the fileshares as NFS
-	# Redefine HOMES_BACK OU_BACK here to the filesystem
+    #echo "Today is Sunday"
 
-	HOME_OPTS="-avh --delete --log-file=/backups/logs/homeShares-$TODAY.log"
-	OU_OPTS="-avh --delete --log-file=/backups/logs/ouShares-$TODAY.log"
+    # Define rsync options
+    HOME_OPTS="-avh --delete --log-file=$LOG_DIR/homeShares-$TODAY.log"
+    OU_OPTS="-avh --delete --log-file=$LOG_DIR/ouShares-$TODAY.log"
 
-	$RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
-	$RSYNC $OU_OPTS $OU_DIR $OU_BACK
+    # Execute rsync to backup homeShares and ouShares
+    $RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
+    $RSYNC $OU_OPTS $OU_DIR $OU_BACK
 
-        # tar.bz2 them up?
-        # FTP them over?
-	# Unmount the fileshares
+    # Compress the full backup for transfer to remote server
+    TAR="/bin/tar"
+    TAR_OPTS="-jpcvf"
+    $TAR $TAR_OPTS "$OU_BACK.tar.bz2" $OU_DIR
+    $TAR $TAR_OPTS "$HOMES_BACK.tar.bz2" $HOMES_DIR
+
+    # Define mount path and options; mount the remote NFS share
+    MOUNT="/sbin/mount"
+    MOUNT_OPTS="-F nfs -o rw,vers=3"
+    TOP_NFS="top.sa3:/home/eastco"
+    MOUNT_PATH="/top"
+    $MOUNT $MOUNT_OPTS $TOP_NFS $MOUNT_PATH
+
+    # Switch to topper (UID 503) to copy over the archive to remote
+    SU="/bin/su"
+    COPY="/usr/bin/cp"
+    COPY_OPTS="-rp"
+    $SU - topper -c "$COPY $COPY_OPTS $HOMES_BACK.tar.bz2 $MOUNT_PATH/homeShares/"
+    $SU - topper -c "$COPY $COPY_OPTS $LOG_DIR/homeShares-$TODAY.log $MOUNT_PATH/logs/"
+    $SU - topper -c "$COPY $COPY_OPTS $OU_BACK.tar.bz2 $MOUNT_PATH/ouShares/"
+    $SU - topper -c "$COPY $COPY_OPTS $LOG_DIR/ouShares-$TODAY.log $MOUNT_PATH/logs/"
+
+    UMOUNT="/usr/sbin/umount"
+    $UMOUNT $MOUNT_PATH
 
 else
 
-	#echo "Today is not Sunday!"
-	HOME_OPTS="-avh --delete --link-dest=$HOME_PREV --log-file=/backups/logs/homeShares-$TODAY.log"
-	OU_OPTS="-avh --delete --link-dest=$OU_PREV --log-file=/backups/logs/ouShares-$TODAY.log"
+    #echo "Today is not Sunday!"
 
-	$RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
-	$RSYNC $OU_OPTS $OU_DIR $OU_BACK
+    # Define rsync options
+    HOME_OPTS="-avh --delete --link-dest=$HOME_PREV --log-file=/backups/logs/homeShares-$TODAY.log"
+    OU_OPTS="-avh --delete --link-dest=$OU_PREV --log-file=/backups/logs/ouShares-$TODAY.log"
+
+    # Execute rsync to backup homeShares and ouShares
+    $RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
+    $RSYNC $OU_OPTS $OU_DIR $OU_BACK
 fi
