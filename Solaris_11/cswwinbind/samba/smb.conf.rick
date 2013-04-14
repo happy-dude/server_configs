@@ -1,0 +1,32 @@
+[global]
+	workgroup = AD
+	realm = AD.EASTCO.SA3
+	server string = Samba Server Version %v
+	security = ADS
+	log file = /var/opt/csw/samba/log/smbd.log
+	max log size = 1000
+	template homedir = /homeShare/%U
+	winbind enum users = Yes
+	winbind enum groups = Yes
+	winbind use default domain = Yes
+	winbind nss info = rfc2307
+	winbind refresh tickets = Yes
+	idmap config * : range = 10001-33554431
+	idmap config AD : range = 500-10000
+	idmap config AD : schema_mode = rfc2307
+	idmap config AD : backend = ad
+	idmap config * : backend = tdb
+
+[homes]
+	comment = Home Directories
+	path = /homeShare/%S
+	read only = No
+	guest ok = Yes
+
+[public]
+	comment = Public Stuff
+	path = /tmpshare
+#	force user = schan
+	read only = No
+	;guest ok = no
+	valid users = %S
