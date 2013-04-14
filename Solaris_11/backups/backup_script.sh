@@ -46,7 +46,7 @@ if [[ $(/usr/gnu/bin/date +%u) -eq 7 ]]; then
 	HOME_OPTS="-avh --delete --log-file=/backups/logs/homeShares-$TODAY.log"
 	OU_OPTS="-avh --delete --log-file=/backups/logs/ouShares-$TODAY.log"
 
-	#$RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
+	$RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
 	$RSYNC $OU_OPTS $OU_DIR $OU_BACK
 
 	# Unmount the fileshares
