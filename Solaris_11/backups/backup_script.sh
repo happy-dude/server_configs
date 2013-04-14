@@ -49,6 +49,8 @@ if [[ $(/usr/gnu/bin/date +%u) -eq 7 ]]; then
 	$RSYNC $HOME_OPTS $HOMES_DIR $HOMES_BACK
 	$RSYNC $OU_OPTS $OU_DIR $OU_BACK
 
+        # tar.bz2 them up?
+        # FTP them over?
 	# Unmount the fileshares
 
 else
