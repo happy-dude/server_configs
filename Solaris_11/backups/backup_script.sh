@@ -40,9 +40,9 @@ RSYNC="/opt/csw/bin/rsync"
 #rsync $OPT $SRC $TRG
 
 # Check if today is Sunday
-if [[ $(/usr/gnu/bin/date +%u) -eq 7 ]]; then
+if [[ $(/usr/gnu/bin/date +%u) -eq 1 ]]; then
 
-    #echo "Today is Sunday"
+    #echo "Today is Monday"
 
     # Define rsync options
     HOME_OPTS="-avh --delete --log-file=$LOG_DIR/homeShares-$TODAY.log"
