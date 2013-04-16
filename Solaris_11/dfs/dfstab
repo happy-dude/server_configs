@@ -1,0 +1,7 @@
+
+# Use the share(1m) or zfs(1m) commands for all share management
+# This file is no longer supported or used in share management
+# Configuration information can be imported into the system by running
+# an existing dfstab file as a script.
+#
+
