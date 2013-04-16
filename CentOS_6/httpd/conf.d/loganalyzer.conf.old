@@ -1,0 +1,10 @@
+<virtualhost *>
+	ServerAdmin webmaster@eastco.sa3
+	DocumentRoot /var/www/html/loganalyzer
+	ServerName logging.eastco.sa3
+
+	<Directory "/var/www/html/loganalyzer">
+		
+	</Directory>
+</virtualhost>
+
