@@ -1,0 +1,13 @@
+#
+# Copyright (c) 2012, Oracle and/or its affiliates. All rights reserved.
+#
+# PAM configuration
+#
+# login service (explicit because of pam_dial_auth)
+#
+auth definitive		pam_user_policy.so.1
+auth requisite		pam_authtok_get.so.1
+auth required		pam_dhkeys.so.1
+auth required		pam_unix_auth.so.1
+auth required		pam_unix_cred.so.1
+auth required		pam_dial_auth.so.1

@@ -1,0 +1,45 @@
+#
+# Copyright (c) 2012, Oracle and/or its affiliates. All rights reserved.
+#
+# PAM configuration
+#
+# Default definitions for Authentication management
+# Used when service name is not explicitly mentioned for authentication
+#
+auth definitive		pam_user_policy.so.1
+auth requisite		pam_authtok_get.so.1
+auth required		pam_dhkeys.so.1
+auth required		pam_unix_auth.so.1
+auth required		pam_unix_cred.so.1
+#
+# Default definition for Account management
+# Used when service name is not explicitly mentioned for account management
+# pam_tsol_account(5) returns PAM_IGNORE if the system is not configured
+# with Trusted Extensions (TX) enabled.  In TX environments some PAM services
+# run in the Trusted Path where pam_tsol_account(5) isn't applicable so in
+# those cases, like gdm(1m) or xscreensaver(1), PAM stacks are delivered
+# in /etc/pam.d which exclude pam_tsol_account(5).  pam_tsol_account(5) does
+# need to run in the Trusted Path for ensuring remote hosts connecting to the
+# global zone have a CIPSO host type.
+#
+account requisite	pam_roles.so.1
+account definitive	pam_user_policy.so.1
+account required	pam_unix_account.so.1
+account required	pam_tsol_account.so.1
+#
+# Default definition for Session management
+# Used when service name is not explicitly mentioned for session management
+#
+session definitive	pam_user_policy.so.1
+session required	pam_unix_session.so.1
+#
+# Default definition for Password management
+# Used when service name is not explicitly mentioned for password management
+#
+password definitive	pam_user_policy.so.1
+# Password construction requirements apply to all users.
+# Edit /usr/lib/security/pam_authtok_common and remove force_check
+# to have the traditional authorized administrator bypass of construction
+# requirements.
+password include	pam_authtok_common
+password required	pam_authtok_store.so.1

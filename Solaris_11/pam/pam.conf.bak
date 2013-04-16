@@ -1,0 +1,26 @@
+#
+# Copyright (c) 1996, 2012, Oracle and/or its affiliates. All rights reserved.
+#
+# PAM configuration
+#
+# This file is now delivered with no entries.  The preferred mechanism
+# for PAM configuration is now using per-service files in /etc/pam.d.
+# Any modifications to this file will be preserved on system update and
+# will be referenced before the per-service files in /etc/pam.d.
+#
+# The libpam(3LIB) library searches for PAM entries in the following order:
+#
+#       /etc/pam.conf for <service> entries
+#       /etc/pam.d/<service>
+#       /etc/pam.conf for "other" entries
+#       /etc/pam.d/other
+#
+# See pam.conf(4) for more details.
+#
+# Unless explicitly defined here or in /etc/pam.d/<service>, all services
+# use the modules defined with the service name of "other".
+#
+# Modules are defined with relative pathnames, i.e., they are
+# relative to /usr/lib/security/$ISA. Absolute path names, as
+# present in this file in previous releases are still acceptable.
+#
