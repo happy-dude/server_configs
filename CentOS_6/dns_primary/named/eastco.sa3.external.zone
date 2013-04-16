@@ -1,0 +1,29 @@
+$TTL 172800
+$ORIGIN eastco.sa3.
+
+@     IN     SOA    dns01.eastco.sa3.    dnsemail.eastco.sa3. (
+                    2013041200;
+                    43200;
+		    900;
+		    1209600;
+		    3600;
+		)
+
+@			NS	lin-cent6-01.eastco.sa3.
+@			NS	sol-11-01.eastco.sa3.
+
+@			MX  10	mail.eastco.sa3.
+
+dns01			A	10.111.221.20
+dns02			A	10.111.221.30
+ftp			A	10.111.221.20
+imap			A	10.111.221.20
+lin-cent6-01		A	10.111.221.20
+mail			A	10.111.221.20
+pop			A	10.111.221.20
+smtp			A	10.111.221.20
+sol-11-01		A	10.111.221.30
+vpn			A	10.111.221.10
+win-2k8r2-01		A	10.111.221.10
+www			A	10.111.221.30
+@			A	10.111.221.30

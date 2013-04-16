@@ -1,0 +1,17 @@
+$TTL 172800
+$ORIGIN 20.10.10.in-addr.arpa.
+
+@     IN     SOA    lin-cent6-01.eastco.sa3.    dnsemail.eastco.sa3. (
+                    2013040400;
+                    43200;
+		    900;
+		    1209600;
+		    3600;
+		)
+
+@			NS	lin-cent6-01.eastco.sa3.
+@			NS	sol-11-01.eastco.sa3.
+
+10			PTR	win-w2k8r2-01.eastco.sa3.
+20			PTR	lin-cent6-01.eastco.sa3.
+30			PTR	sol-11-01.eastco.sa3.
