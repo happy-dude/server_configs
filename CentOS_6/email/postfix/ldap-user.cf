@@ -1,0 +1,7 @@
+server_host = ad.eastco.sa3
+query_filter = (&(objectclass=person)(mail=%s))
+result_attribute = samaccountname
+result_format = %s/Maildir/
+bind = yes
+#bind_dn =cn=mailuser,dc=acme,dc=local
+#bind_pw = password
