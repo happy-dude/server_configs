@@ -1,0 +1,7 @@
+DEVICE="eth0"
+BOOTPROTO=none
+HWADDR="00:19:D1:89:99:ED"
+NM_CONTROLLED="no"
+ONBOOT="yes"
+TYPE="Ethernet"
+

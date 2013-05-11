@@ -1,3 +1,4 @@
 CentOS 6
 /etc/vsftpd
 /etc/jailkit
+/etc/rc.local
