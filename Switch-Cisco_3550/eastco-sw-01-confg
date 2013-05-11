@@ -83,55 +83,65 @@ interface FastEthernet0/11
 !
 interface FastEthernet0/12
  switchport access vlan 20
- switchport mode access
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
 !
 interface FastEthernet0/13
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/14
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/15
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/16
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/17
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/18
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/19
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/20
  switchport access vlan 30
  switchport mode access
+ spanning-tree portfast
 !
 interface FastEthernet0/21
- switchport access vlan 30
  switchport mode access
 !
 interface FastEthernet0/22
- switchport access vlan 30
- switchport mode access
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
 !
 interface FastEthernet0/23
- switchport access vlan 30
+ switchport access vlan 221
  switchport mode access
 !
 interface FastEthernet0/24
+ switchport access vlan 221
  switchport trunk encapsulation dot1q
- switchport mode trunk
+ switchport trunk native vlan 221
+ switchport mode access
 !
 interface GigabitEthernet0/1
  switchport mode dynamic desirable
@@ -165,4 +175,7 @@ line vty 0 4
  transport input ssh
 line vty 5 15
 !
+!
+monitor session 1 source interface Fa0/24 rx
+monitor session 1 destination interface Fa0/21
 end
