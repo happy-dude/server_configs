@@ -45,7 +45,8 @@ ServerRoot "/usr/apache2/2.2"
 #Listen 12.34.56.78:80
 Listen 80
 
-#
+
+
 # Dynamic Shared Object (DSO) Support
 #
 # To be able to use the functionality of a module which was built as a DSO you
@@ -53,12 +54,25 @@ Listen 80
 # (32-bit or 64-bit module) /etc/apache2/2.2/conf.d/modules-*.load file so that
 # the directives contained in it are actually available _before_ they are used.
 #
+
+
+
 <IfDefine 64bit>
 Include /etc/apache2/2.2/conf.d/modules-64.load
 </IfDefine>
 <IfDefine !64bit>
 Include /etc/apache2/2.2/conf.d/modules-32.load
 </IfDefine>
+
+
+#PHP configuration
+AddType application/x-httpd-php .php
+
+<FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+</FilesMatch>
+PHPiniDir "/etc/php/5.2/php.ini"
+
 
 
 <IfModule !mpm_netware_module>
@@ -73,6 +87,7 @@ Include /etc/apache2/2.2/conf.d/modules-32.load
 #
 User webservd
 Group webservd
+
 
 </IfModule>
 </IfModule>
@@ -127,6 +142,12 @@ DocumentRoot "/var/apache2/2.2/htdocs"
     Deny from all
 </Directory>
 
+<Directory "/livechat/livechat">
+	Options Indexes FollowSymLinks
+	AllowOverride all 
+	Order allow,deny
+	Allow from all
+</Directory>
 #
 # Note that from this point forward you must specifically allow
 # particular features to be enabled - so if something's not working as
@@ -172,7 +193,7 @@ DocumentRoot "/var/apache2/2.2/htdocs"
 # is requested.
 #
 <IfModule dir_module>
-    DirectoryIndex index.html
+    DirectoryIndex index.html index.php
 </IfModule>
 
 #
@@ -297,7 +318,7 @@ DefaultType text/plain
     # filename extension to MIME-type.
     #
     TypesConfig /etc/apache2/2.2/mime.types
-
+    AddType application/x-httpd-php .php
     #
     # AddType allows you to add to or override the MIME configuration
     # file specified in TypesConfig for specific file types.
