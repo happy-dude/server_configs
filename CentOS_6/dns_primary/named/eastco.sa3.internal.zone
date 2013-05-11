@@ -2,7 +2,7 @@ $TTL 172800
 $ORIGIN eastco.sa3.
 
 @     IN     SOA    lin-cent6-01.eastco.sa3.    dnsemail.eastco.sa3. (
-                    2013041300;
+                    2013042200;
                     43200;
 		    900;
 		    1209600;
@@ -10,9 +10,9 @@ $ORIGIN eastco.sa3.
 		)
 
 @			NS	lin-cent6-01.eastco.sa3.
-@			NS	sol-11-01-eastco.sa3.
+@			NS	sol-11-01.eastco.sa3.
 
-@			MX  10	lin-cent6-eastco.sa3.
+@			MX  10	lin-cent6.eastco.sa3.
 
 ad.eastco.sa3.		NS	win-2k8r2-01.eastco.sa3.
 
@@ -41,4 +41,4 @@ smb			CNAME	sol-11-01.eastco.sa3.
 smtp			CNAME	lin-cent6-01.eastco.sa3.
 vpn			CNAME	win-2k8r2-01.eastco.sa3.
 www			CNAME	sol-11-01.eastco.sa3.
-
+proxy			CNAME	lin-cent6-01.eastco.sa3.

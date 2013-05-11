@@ -1,0 +1,44 @@
+$TTL 172800
+$ORIGIN eastco.hugeco.sa3.
+
+@     IN     SOA    lin-cent6-01.eastco.hugeco.sa3.    dnsemail.eastco.hugeco.sa3. (
+                    2013042200;
+                    43200;
+		    900;
+		    1209600;
+		    3600;
+		)
+
+@			NS	lin-cent6-01.eastco.hugeco.sa3.
+@			NS	sol-11-01.eastco.hugeco.sa3.
+
+@			MX  10	lin-cent6.eastco.hugeco.sa3.
+
+ad.eastco.sa3.		NS	win-2k8r2-01.eastco.hugeco.sa3.
+
+win-2k8r2-01		A	10.10.10.10
+lin-cent6-01		A	10.10.10.20
+sol-11-01		A	10.10.10.30
+@			A	10.10.10.20
+
+localhost		A	127.0.0.1
+
+chat			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+dns01			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+dns02			CNAME	sol-11-01.eastco.hugeco.sa3.
+dns			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+ftp			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+ftpinternal		CNAME	sol-11-01.eastco.hugeco.sa3.
+imap			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+intranet		CNAME	lin-cent6-01.eastco.hugeco.sa3.
+logs			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+mail			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+monitoring		CNAME	lin-cent6-01.eastco.hugeco.sa3.
+nfs			CNAME	sol-11-01.eastco.hugeco.sa3.
+ntp			CNAME	sol-11-01.eastco.hugeco.sa3.
+pop			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+smb			CNAME	sol-11-01.eastco.hugeco.sa3.
+smtp			CNAME	lin-cent6-01.eastco.hugeco.sa3.
+vpn			CNAME	win-2k8r2-01.eastco.hugeco.sa3.
+www			CNAME	sol-11-01.eastco.hugeco.sa3.
+proxy			CNAME	lin-cent6-01.eastco.hugeco.sa3.

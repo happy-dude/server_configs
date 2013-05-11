@@ -1,0 +1,28 @@
+$ORIGIN .
+$TTL 60	; 1 minute
+midco.sa3		IN SOA	ns1.midco.sa3. ryansb.midco.sa3. (
+				2013042526 ; serial
+				300        ; refresh (5 minutes)
+				300        ; retry (5 minutes)
+				300        ; expire (5 minutes)
+				300        ; minimum (5 minutes)
+				)
+			NS	ns1.midco.sa3.
+			NS	ns2.midco.sa3.
+			NS	dns01.eastco.sa3.
+			A	10.111.231.1
+			MX	10 smtp.midco.sa3.
+$ORIGIN midco.sa3.
+dubbs			CNAME	www
+$TTL 180	; 3 minutes
+ftp			A	10.111.231.1
+$TTL 60	; 1 minute
+imap			A	10.111.231.1
+ns1			A	10.111.231.1
+ns2			A	10.111.231.11
+pop			A	10.111.231.1
+dns01.eastco.sa3	A	10.11.221.20
+smtp			A	10.111.231.1
+vpn			A	10.111.231.7
+$TTL 180	; 3 minutes
+www			A	10.111.231.1
