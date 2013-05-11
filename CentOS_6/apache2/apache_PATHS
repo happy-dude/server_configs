@@ -1,3 +1,4 @@
 CentOS 6
 /etc/httpd
 /var/apache2
+/var/www
