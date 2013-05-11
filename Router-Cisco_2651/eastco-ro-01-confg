@@ -7,6 +7,8 @@ service password-encryption
 !
 hostname eastco-ro-01
 !
+boot system flash:c2600-a3jk9s-mz.122-46a.bin
+no logging on
 aaa new-model
 aaa authentication login default local
 enable secret 5 $1$F6p8$Cdi2YXHRWcji72bAo1lY4.
@@ -17,6 +19,7 @@ ip subnet-zero
 !
 ip domain-name eastco.sa3
 !
+ip cef
 !
 call rsvp-sync
 !
@@ -64,9 +67,10 @@ interface Serial0/1
  shutdown
 !
 !
+ip nat translation pptp-timeout never
 ip nat pool vlan10 10.111.221.250 10.111.221.250 prefix-length 24
-ip nat pool vlan20 10.111.221.251 10.111.221.251 prefix-length 24
 ip nat pool vlan30 10.111.221.252 10.111.221.252 prefix-length 24
+ip nat pool vlan20 10.111.221.251 10.111.221.251 netmask 255.255.255.0
 ip nat inside source list 10 pool vlan10 overload
 ip nat inside source list 20 pool vlan20 overload
 ip nat inside source list 30 pool vlan30 overload
@@ -90,6 +94,12 @@ access-list 5 permit 10.10.30.0 0.0.0.255
 access-list 10 permit 10.10.10.0 0.0.0.255
 access-list 20 permit 10.10.20.0 0.0.0.255
 access-list 30 permit 10.10.30.0 0.0.0.255
+access-list 120 permit icmp any any
+access-list 150 permit tcp host 10.10.20.20 any eq www
+access-list 150 permit tcp host 10.10.20.20 any eq 443
+access-list 150 deny   tcp any any eq www
+access-list 150 deny   tcp any any eq 443
+access-list 150 permit ip any any
 !
 !
 dial-peer cor custom
