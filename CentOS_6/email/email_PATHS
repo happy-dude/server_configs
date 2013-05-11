@@ -1,0 +1,4 @@
+CentOS 6
+/etc/postfix
+/etc/dovecot
+/etc/aliases
