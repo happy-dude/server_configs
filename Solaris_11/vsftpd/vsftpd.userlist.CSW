@@ -1,0 +1,15 @@
+root
+daemon
+bin
+sys
+adm
+lp
+uucp
+nuucp
+listen
+nobody
+noaccess
+nobody4
+ftpsecure
+sshd
+
