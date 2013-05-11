@@ -13,6 +13,7 @@
 #Port 22
 #AddressFamily any
 ListenAddress 10.10.10.20
+ListenAddress 10.10.20.20
 #ListenAddress ::
 
 # Disable legacy (protocol version 1) support in the server for new
@@ -139,4 +140,4 @@ Subsystem	sftp	/usr/libexec/openssh/sftp-server
 #	AllowTcpForwarding no
 #	ForceCommand cvs server
 
-AllowUsers zabbix schan-admin mdeclara-admin mneyland-admin knicodemus-admin npollack-admin gleete-admin
+AllowUsers zabbix schan-admin mdeclara-admin mneyland-admin knicodemus-admin npollack-admin gleete-admin hugesync

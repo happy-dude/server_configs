@@ -1,0 +1,9 @@
+*/5 * * * * /usr/local/bin/hugesync_midco_dns
+#*/5 * * * * /usr/sbin/rndc freeze eastco.sa3 in externalView
+#*/5 * * * * /usr/sbin/rndc freeze eastco.hugeco.sa3 in externalView
+#*/5 * * * * /usr/sbin/rndc thaw eastco.sa3 in externalView
+#*/5 * * * * /usr/sbin/rndc thaw eastco.hugeco.sa3 in externalView
+0 1 * * * /usr/local/bin/ftp_rep.sh
+0 0 1 * * /usr/local/bin/mysql_rep.sh
+*/5 * * * * [ -e /var/named/freeze_lock ] && rndc freeze eastco.sa3 in externalView && rndc thaw thaw eastco.sa3 in externalView
+*/5 * * * * [ -e /var/named/freeze_lock ] && rndc freeze eastco.hugeco.sa3 in externalView && rndc thaw eastco.hugeco.sa3 in externalView
