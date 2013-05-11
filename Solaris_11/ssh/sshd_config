@@ -106,5 +106,5 @@ PermitRootLogin no
 #IgnoreUserKnownHosts yes
 
 HostbasedAuthentication yes
-AllowUsers zabbix schan-admin mdeclara-admin mneyland-admin knicodemus-admin npollack-admin gleete-admin
+AllowUsers zabbix schan-admin mdeclara-admin mneyland-admin knicodemus-admin npollack-admin gleete-admin hugesync
 #AllowGroups domain*admins
