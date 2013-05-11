@@ -1,18 +1,18 @@
 $ORIGIN .
 $TTL 180	; 3 minutes
-eastco.sa3		IN SOA	dns01.eastco.sa3. dnsemail.eastco.sa3. (
-				2013050936 ; serial
+eastco.hugeco.sa3	IN SOA	dns01.eastco.hugeco.sa3. dnsemail.eastco.hugeco.sa3. (
+				2013050925 ; serial
 				43200      ; refresh (12 hours)
 				900        ; retry (15 minutes)
 				1209600    ; expire (2 weeks)
 				3600       ; minimum (1 hour)
 				)
-			NS	dns01.eastco.sa3.
-			NS	dns02.eastco.sa3.
-			NS	cactus.westco.sa3.
+			NS	dns01.eastco.hugeco.sa3.
+			NS	dns02.eastco.hugeco.sa3.
+			NS	cactus.westco.hugeco.sa3.
 			A	10.111.221.30
-			MX	10 mail.eastco.sa3.
-$ORIGIN eastco.sa3.
+			MX	10 mail.eastco.hugeco.sa3.
+$ORIGIN eastco.hugeco.sa3.
 dns01			A	10.111.221.20
 dns02			A	10.111.221.30
 ftp			A	10.111.221.20
