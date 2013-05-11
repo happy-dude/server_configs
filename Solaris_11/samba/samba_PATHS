@@ -1,0 +1,3 @@
+Solaris 11
+/etc/opt/csw/samba      [config path is different for CSWwinbind,
+                            one for auth, other for fileshares]

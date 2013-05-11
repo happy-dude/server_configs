@@ -1,0 +1,6 @@
+Solaris 11
+/etc/krb5
+/etc/nsswitch.conf
+/etc/pam.conf
+/etc/samba      [config path is different for CSWwinbind,
+                            one for auth, other for fileshares]
