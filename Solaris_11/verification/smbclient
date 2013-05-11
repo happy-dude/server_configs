@@ -1,0 +1,17 @@
+Domain=[AD] OS=[Unix] Server=[Samba 3.6.6]
+Domain=[AD] OS=[Unix] Server=[Samba 3.6.6]
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	homes           Disk      Home Directories
+	ou              Disk      OU Department shares
+	restores        Disk      Backup restoration location
+	IPC$            IPC       IPC Service (Samba Server Version 3.6.6)
+Anonymous login successful
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------

@@ -1,0 +1,117 @@
+     UID   PID  PPID   C    STIME TTY         TIME CMD
+    root     0     0   0   Apr 14 ?           0:02 sched
+    root     5     0   0   Apr 14 ?          23:55 zpool-rpool
+    root     6     0   0   Apr 14 ?           2:11 kmem_task
+    root     1     0   0   Apr 14 ?           0:17 /usr/sbin/init
+    root     2     0   0   Apr 14 ?           0:29 pageout
+    root     3     0   0   Apr 14 ?          78:13 fsflush
+    root     7     0   0   Apr 14 ?           0:06 intrd
+    root     8     0   0   Apr 14 ?           0:00 vmtasks
+  zabbix   931   922   0   Apr 14 ?           1:14 /opt/csw/sbin/zabbix_agentd
+    root    11     1   0   Apr 14 ?           0:38 /lib/svc/bin/svc.startd
+    root    13     1   0   Apr 14 ?           2:15 /lib/svc/bin/svc.configd
+    root   117     1   0   Apr 14 ?           0:00 /usr/lib/pfexecd
+  daemon    82     1   0   Apr 14 ?           5:19 /lib/crypto/kcfd
+    root   260     1   0   Apr 14 ?           0:32 /usr/lib/devfsadm/devfsadmd
+   dladm    63     1   0   Apr 14 ?           0:14 /usr/sbin/dlmgmtd
+  netcfg    43     1   0   Apr 14 ?           0:14 /lib/inet/netcfgd
+    root   134     1   0   Apr 14 ?           0:00 /usr/lib/sysevent/syseventd
+    root 19229     1   0   Apr 20 ?           0:00 /usr/lib/autofs/automountd
+  netadm    92     1   0   Apr 14 ?           0:00 /lib/inet/ipmgmtd
+    root   104     1   0   Apr 14 ?           0:34 /lib/inet/in.mpathd
+  netadm   596     1   0   Apr 14 ?           0:16 /lib/inet/nwamd
+    root  1023     1   0   Apr 14 ?           0:00 /usr/lib/rmvolmgr -s
+    root   296     1   0   Apr 14 ?           0:13 /usr/lib/dbus-daemon --system
+     gdm 28229 28208   0   Apr 21 ?           0:24 metacity
+    root   995   881   0   Apr 14 ?           0:30 /usr/lib/hal/hald-addon-acpi
+    root 19220     0   0   Apr 20 ?           0:01 lockd_kproc
+    root   630     1   0   Apr 14 ?           0:42 /sbin/dhcpagent
+    root   870     1   0   Apr 14 ?           0:00 /opt/csw/sbin/vsftpd
+    root   930     1   0   Apr 14 ?           0:00 /usr/sbin/cron
+    root   194     1   0   Apr 14 ?           0:00 /usr/sbin/vbiosd
+    root 13354     1   0   May 09 ?           0:18 /opt/csw/sbin/winbindd -D
+    root 13358 13354   0   May 09 ?           0:01 /opt/csw/sbin/winbindd -D
+    root 19258     1   0   Apr 20 ?           0:00 /usr/lib/nfs/nfsd
+    root   879     1   0   Apr 14 ?           0:32 /usr/lib/hal/hald --daemon=yes
+    root 18138     1   0   Apr 16 ?           0:30 /usr/sbin/smbd -D
+    root   209     1   0   Apr 14 ?           0:13 /usr/lib/rad/rad -sp
+     gdm 28208 28165   0   Apr 21 ?           0:06 /usr/bin/gnome-session --autostart=/usr/share/gdm/autostart/LoginWindow/
+    root   215     1   0   Apr 14 ?           0:00 /usr/lib/zones/zonestatd
+    root   664     1   0   Apr 14 ?           0:00 /usr/lib/picl/picld
+  zabbix   928   922   0   Apr 14 ?          62:11 /opt/csw/sbin/zabbix_agentd
+    root   223     1   0   Apr 14 ?           0:03 /usr/lib/utmpd
+  zabbix   932   922   0   Apr 14 ?           8:43 /opt/csw/sbin/zabbix_agentd
+    root  1353     1   0   Apr 14 ?           0:13 /usr/lib/devchassis/devchassisd
+webservd 12013 11986   0 17:51:22 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+    root   880     1   0   Apr 14 ?           0:02 /usr/sbin/console-kit-daemon
+    root   881   879   0   Apr 14 ?           0:00 hald-runner
+    root  1012     1   0   Apr 14 ?           2:03 /usr/sbin/nscd
+    root  1009     1   0   Apr 14 ?           0:00 /usr/lib/reparse/reparsed
+  zabbix   922     1   0   Apr 14 ?           0:00 /opt/csw/sbin/zabbix_agentd
+  zabbix   929   922   0   Apr 14 ?           0:06 /opt/csw/sbin/zabbix_agentd
+  zabbix   933   922   0   Apr 14 ?           0:55 /opt/csw/sbin/zabbix_agentd
+    root   994   881   0   Apr 14 ?           0:00 /usr/lib/hal/hald-addon-cpufreq
+    root  1013   881   0   Apr 14 ?           0:00 /usr/lib/hal/hald-addon-storage
+    root   998     1   0   Apr 14 ?           2:19 /usr/lib/inet/ntpd -p /var/run/ntp.pid -g
+    root 19231 19229   0   Apr 20 ?           0:10 /usr/lib/autofs/automountd
+  daemon 19194     1   0   Apr 20 ?           0:14 /usr/lib/nfs/nfsmapid
+schan-ad 20744 20636   0 15:28:40 pts/1       0:00 ps -ef
+webservd 11990 11986   0 17:47:56 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+    root  3219 18138   0   May 08 ?           0:06 /usr/sbin/smbd -D
+     gdm 28230 28208   0   Apr 21 ?          37:39 /usr/lib/gdm-simple-greeter
+    root 19663     1   0   Apr 20 ?           0:36 /usr/sbin/named
+  daemon 19219     1   0   Apr 20 ?           0:00 /usr/lib/nfs/lockd
+  daemon 19198     1   0   Apr 20 ?           0:00 /usr/lib/nfs/nfs4cbd
+    root  1149     1   0   Apr 14 ?           0:32 /usr/sbin/syslogd
+    root  1193    11   0   Apr 14 vt/5        0:00 /usr/sbin/ttymon -g -d /dev/vt/5 -l console -m ldterm,ttcompat -h -p sol-11-01 
+    root  1138     1   0   Apr 14 ?           0:47 /usr/lib/fm/fmd/fmd
+    root  1161    11   0   Apr 14 console     0:00 /usr/sbin/ttymon -g -d /dev/console -l console -T sun-color -m ldterm,ttcompat 
+webservd 12009 11986   0 17:51:20 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+    root  1190    11   0   Apr 14 vt/4        0:00 /usr/sbin/ttymon -g -d /dev/vt/4 -l console -m ldterm,ttcompat -h -p sol-11-01 
+    root  1159     1   0   Apr 14 ?           0:00 /usr/sbin/auditd
+     gdm 28231 28208   0   Apr 21 ?           1:03 gnome-power-manager
+    root  1183     1   0   Apr 14 vt/1        0:00 /usr/lib/vtdaemon -c 16
+    root  1189    11   0   Apr 14 vt/6        0:00 /usr/sbin/ttymon -g -d /dev/vt/6 -l console -m ldterm,ttcompat -h -p sol-11-01 
+    root  1187    11   0   Apr 14 vt/2        0:00 /usr/sbin/ttymon -g -d /dev/vt/2 -l console -m ldterm,ttcompat -h -p sol-11-01 
+webservd 11989 11986   0 17:47:56 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+noaccess  1357     1   0   Apr 14 ?           0:00 /usr/lib/fm/notify/asr-notify
+    root 28166 28165   0   Apr 21 vt/7       21:52 /usr/bin/Xorg :0 -nolisten tcp -config xorg.conf.vesa -br -novtswitch -auth /tm
+    root 28165 28163   0   Apr 21 ?           3:54 /usr/lib/gdm-simple-slave --display-id /org/gnome/DisplayManager/Display1
+     gdm 28224     1   0   Apr 21 ?           0:05 /usr/lib/gnome-settings-daemon --gconf-prefix=/apps/gdm/simple-greeter/settings
+    root 13355 13354   0   May 09 ?           0:32 /opt/csw/sbin/winbindd -D
+     gdm 28205     1   0   Apr 21 ?           0:00 /usr/lib/dbus-daemon --fork --print-pid 6 --print-address 8 --session
+     gdm 28228     1   0   Apr 21 ?           0:00 /usr/lib/gvfsd
+    root  1244    11   0   Apr 14 vt/3        0:00 /usr/sbin/ttymon -g -d /dev/vt/3 -l console -m ldterm,ttcompat -h -p sol-11-01 
+    root 13952     1   0   May 09 ?           0:03 /usr/lib/ssh/sshd
+     gdm 28204     1   0   Apr 21 ?           0:00 /usr/bin/dbus-launch --exit-with-session
+mneyland  2253  2252   0   Apr 14 pts/3       0:00 -bash
+webservd 11987 11986   0 17:47:56 ?           0:01 /usr/apache2/2.2/bin/httpd -k start
+    root  1374     1   0   Apr 14 ?           0:00 /usr/lib/inet/in.ndpd
+    root 28163     1   0   Apr 21 ?           0:05 /usr/sbin/gdm-binary
+    root  1742     1   0   Apr 14 ?           0:00 /usr/lib/ocm/ccr/bin/nmz
+     gdm 28221     1   0   Apr 21 ?           0:07 /usr/lib/gconfd-2
+     gdm 28222 28208   0   Apr 21 ?           0:24 /usr/lib/at-spi-registryd
+     gdm 28226     1   0   Apr 21 ?           0:00 /usr/lib/bonobo-activation-server --ac-activate --ior-output-fd=19
+    root 20634 13952   0 15:24:04 ?           0:00 /usr/lib/ssh/sshd
+    root 19256     1   0   Apr 20 ?           0:01 /usr/lib/nfs/mountd
+mneyland  2252     1   0   Apr 14 ?          11:01 tmux new
+schan-ad 20636 20635   0 15:24:06 pts/1       0:02 -zsh
+    root 19199     0   0   Apr 20 ?           0:00 nfs4cbd_kproc
+    root 19259     0   0   Apr 20 ?           0:44 nfsd_kproc
+    root 11986     1   0 17:47:55 ?           0:02 /usr/apache2/2.2/bin/httpd -k start
+  daemon 19179     1   0   Apr 20 ?           0:00 /usr/sbin/rpcbind
+  daemon 19201     1   0   Apr 20 ?           0:15 /usr/lib/nfs/statd
+    root 18140 18138   0   Apr 16 ?           0:00 /usr/sbin/smbd -D
+webservd 11988 11986   0 17:47:56 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+    root 19221     1   0   Apr 20 ?           0:00 /usr/lib/inet/inetd start
+    root 13421 13354   0   May 09 ?           0:01 /opt/csw/sbin/winbindd -D
+webservd 11991 11986   0 17:47:56 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+schan-ad 20709 20636   0 15:25:56 pts/1       0:00 smbclient -L localhost
+webservd 12012 11986   0 17:51:22 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+schan-ad 20635 20634   0 15:24:04 ?           0:00 /usr/lib/ssh/sshd
+webservd 11992 11986   0 17:47:56 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+    root 13359 13354   0   May 09 ?           0:03 /opt/csw/sbin/winbindd -D
+    root  5973 28165   0   May 10 ?           0:01 /usr/lib/gdm-session-worker
+webservd 12015 11986   0 17:51:22 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+webservd 17230 11986   0 09:28:01 ?           0:00 /usr/apache2/2.2/bin/httpd -k start
+schan-ad 20714 20636   0 15:26:05 pts/1       0:00 smbclient -L localhost

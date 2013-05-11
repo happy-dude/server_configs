@@ -1,0 +1,10 @@
+NAME              CLASS/TYPE STATE        UNDER      ADDR
+lo0               loopback   ok           --         --
+   lo0/v4         static     ok           --         127.0.0.1/8
+   lo0/v6         static     ok           --         ::1/128
+net0              ip         ok           --         --
+   net0/v4        dhcp       ok           --         10.10.10.30/24
+   net0/v6        addrconf   ok           --         fe80::216:76ff:fe50:bd76/10
+net1              ip         ok           --         --
+   net1/v4        dhcp       ok           --         10.10.20.30/24
+   net1/v6        addrconf   ok           --         fe80::21b:21ff:fe7c:7d59/10

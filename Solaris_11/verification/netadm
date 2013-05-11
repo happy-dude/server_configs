@@ -1,0 +1,9 @@
+TYPE        PROFILE        STATE
+ncp         Automatic      online
+ncu:phys    net0           online
+ncu:phys    net1           online
+ncu:ip      net0           online
+ncu:ip      net1           online
+ncp         DefaultFixed   disabled
+loc         NoNet          offline
+loc         Automatic      online
