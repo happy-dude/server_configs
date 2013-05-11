@@ -1,0 +1,29 @@
+# Copyright 2001-2012 Sourcefire Inc. All Rights Reserved.
+#
+# This file may contain proprietary rules that were created, tested and
+# certified by Sourcefire, Inc. (the "VRT Certified Rules") as well as
+# rules that were created by Sourcefire and other third parties and
+# distributed under the GNU General Public License (the "GPL Rules").  The
+# VRT Certified Rules contained in this file are the property of
+# Sourcefire, Inc. Copyright 2012 Sourcefire, Inc. All Rights Reserved.
+# The GPL Rules created by Sourcefire, Inc. are the property of
+# Sourcefire, Inc. Copyright 2002-2012 Sourcefire, Inc. All Rights
+# Reserved.  All other GPL Rules are owned and copyrighted by their
+# respective owners (please see www.snort.org/contributors for a list of
+# owners and their respective copyrights).  In order to determine what
+# rules are VRT Certified Rules or GPL Rules, please refer to the VRT
+# Certified Rules License Agreement.
+#
+#------------
+# ICMP RULES
+#------------
+#
+# Description:
+# These rules are potentially bad ICMP traffic.  They include most of the
+# ICMP scanning tools and other "BAD" ICMP traffic (Such as redirect host)
+#
+# Other ICMP rules are included in icmp-info.rules
+
+#alert icmp any any -> any any (msg:"ICMP Testing Rule"; sid:1000001; rev:1;)
+#alert tcp any any -> any 80 (msg:"TCP Testing Rule"; sid:1000002; rev:1;)
+#alert udp any any -> any any (msg:"UDP Testing Rule"; sid:1000003; rev:1;)

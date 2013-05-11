@@ -1,0 +1,32 @@
+# Copyright 2001-2012 Sourcefire Inc. All Rights Reserved.
+#
+# This file may contain proprietary rules that were created, tested and
+# certified by Sourcefire, Inc. (the "VRT Certified Rules") as well as
+# rules that were created by Sourcefire and other third parties and
+# distributed under the GNU General Public License (the "GPL Rules").  The
+# VRT Certified Rules contained in this file are the property of
+# Sourcefire, Inc. Copyright 2012 Sourcefire, Inc. All Rights Reserved.
+# The GPL Rules created by Sourcefire, Inc. are the property of
+# Sourcefire, Inc. Copyright 2002-2012 Sourcefire, Inc. All Rights
+# Reserved.  All other GPL Rules are owned and copyrighted by their
+# respective owners (please see www.snort.org/contributors for a list of
+# owners and their respective copyrights).  In order to determine what
+# rules are VRT Certified Rules or GPL Rules, please refer to the VRT
+# Certified Rules License Agreement.
+#
+#--------------
+# POLICY RULES
+#--------------
+#
+
+
+
+
+# we have started to see multiple versions of this beyond 003.003, so we have
+# expanded this signature to take that into account.
+
+
+# NOTES: This signature would be better off using uricontent, and having the
+# http decoder looking at 5800 and 5802, but that is on by default
+
+

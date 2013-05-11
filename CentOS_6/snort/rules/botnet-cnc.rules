@@ -1,0 +1,26 @@
+# Copyright 2001-2012 Sourcefire Inc. All Rights Reserved.
+#
+# This file may contain proprietary rules that were created, tested and
+# certified by Sourcefire, Inc. (the "VRT Certified Rules") as well as
+# rules that were created by Sourcefire and other third parties and
+# distributed under the GNU General Public License (the "GPL Rules").  The
+# VRT Certified Rules contained in this file are the property of
+# Sourcefire, Inc. Copyright 2012 Sourcefire, Inc. All Rights Reserved.
+# The GPL Rules created by Sourcefire, Inc. are the property of
+# Sourcefire, Inc. Copyright 2002-2012 Sourcefire, Inc. All Rights
+# Reserved.  All other GPL Rules are owned and copyrighted by their
+# respective owners (please see www.snort.org/contributors for a list of
+# owners and their respective copyrights).  In order to determine what
+# rules are VRT Certified Rules or GPL Rules, please refer to the VRT
+# Certified Rules License Agreement.
+#
+#------------------
+# BOTNET-CNC RULES
+#------------------
+#
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain datajunction.org - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|0C|datajunction|03|org|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23802; rev:1;)
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain guest-access.net - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|0C|guest-access|03|net|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23799; rev:1;)
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain secuurity.net - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|09|secuurity|03|net|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23803; rev:1;)
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain bestcomputeradvisor.com - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|13|bestcomputeradvisor|03|com|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23801; rev:1;)
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain gowin7.com - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|06|gowin7|03|com|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23804; rev:1;)
+alert udp $HOME_NET any -> any 53 (msg:"BLACKLIST DNS request for known malware domain dotnetadvisor.info - Gauss"; flow:to_server; byte_test:1,!&,0xF8,2; content:"|0D|dotnetadvisor|04|info|00|"; fast_pattern:only; metadata:impact_flag red, policy balanced-ips drop, policy security-ips drop, service dns; reference:url,gauss.crysys.hu/; reference:url,www.securelist.com/en/blog/208193767/Gauss_Nation_state_cyber_surveillance_meets_banking_Trojan; classtype:trojan-activity; sid:23800; rev:1;)

@@ -1,0 +1,57 @@
+# Copyright 2001-2012 Sourcefire Inc. All Rights Reserved.
+#
+# This file may contain proprietary rules that were created, tested and
+# certified by Sourcefire, Inc. (the "VRT Certified Rules") as well as
+# rules that were created by Sourcefire and other third parties and
+# distributed under the GNU General Public License (the "GPL Rules").  The
+# VRT Certified Rules contained in this file are the property of
+# Sourcefire, Inc. Copyright 2012 Sourcefire, Inc. All Rights Reserved.
+# The GPL Rules created by Sourcefire, Inc. are the property of
+# Sourcefire, Inc. Copyright 2002-2012 Sourcefire, Inc. All Rights
+# Reserved.  All other GPL Rules are owned and copyrighted by their
+# respective owners (please see www.snort.org/contributors for a list of
+# owners and their respective copyrights).  In order to determine what
+# rules are VRT Certified Rules or GPL Rules, please refer to the VRT
+# Certified Rules License Agreement.
+#
+#------------
+# MISC RULES
+#------------
+
+
+# once we get response, check for content:"|00 01 00|"; offset:0; depth:3;
+
+
+
+# once we get response, check for content:"|03|"; offset:0; depth:1;
+
+
+
+
+# This rule needs some work since you don't have to pass BEGIN and END
+# anywhere near each other.
+#
+#! alert tcp $EXTERNAL_NET any -> $HOME_NET 2401 ( \
+#!   msg:"MISC CVS username overflow attempt"; flow:to_server,established; \
+#!   content:"BEGIN AUTH REQUEST|0A|"; content:!"|0A|END AUTH REQUEST|0A|"; \
+#!   within:255; classtype:misc-attack;)
+
+
+# normally Idon't like using 3a for :, but in this case... I'd like to remove the false positives stemming from someone using anoncvs to checkout snort rules :)
+
+
+
+
+# this rule is specificly not looking for flow, since tcpdump handles lengths wrong
+
+
+
+
+
+
+
+
+
+
+
+

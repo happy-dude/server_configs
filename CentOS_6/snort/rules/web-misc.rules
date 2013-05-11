@@ -1,0 +1,130 @@
+# Copyright 2001-2012 Sourcefire Inc. All Rights Reserved.
+#
+# This file may contain proprietary rules that were created, tested and
+# certified by Sourcefire, Inc. (the "VRT Certified Rules") as well as
+# rules that were created by Sourcefire and other third parties and
+# distributed under the GNU General Public License (the "GPL Rules").  The
+# VRT Certified Rules contained in this file are the property of
+# Sourcefire, Inc. Copyright 2012 Sourcefire, Inc. All Rights Reserved.
+# The GPL Rules created by Sourcefire, Inc. are the property of
+# Sourcefire, Inc. Copyright 2002-2012 Sourcefire, Inc. All Rights
+# Reserved.  All other GPL Rules are owned and copyrighted by their
+# respective owners (please see www.snort.org/contributors for a list of
+# owners and their respective copyrights).  In order to determine what
+# rules are VRT Certified Rules or GPL Rules, please refer to the VRT
+# Certified Rules License Agreement.
+#
+#----------------
+# WEB-MISC RULES
+#----------------
+
+
+
+
+
+# The following signatures are for non-standard ports.  When ports lists work,
+# then these will be converted to use HTTP_PORTS & HTTP_SERVERS
+
+# uricontent would be nice, but we can't be sure we are running http decoding
+# on 2301.  oh for rna integration...
+
+
+# when we get real ports list, we will merge these sigs.  so for now, keep the
+# message the same.
+
+
+
+
+
+
+
+# NOTES: this signature looks for access to common webalizer output directories.
+# Webalizer is a http server log reporting program.  By allowing anyone on the
+# internet to view the web access logs, attackers can gain information about
+# your customers that probably should not be made public.  webalizer had cross
+# site scripting bugs prior to version 2.01-09.
+
+
+# NOTES: this signature looks for someone accessing the directory webcart-lite.
+# webcart-lite allows users to access world readable plain text customer
+# information databases.  To correct this issue, users should make the
+# data directories and databases not world readable, move the files outside of
+# WEBROOT if possible, and verify that a compromise of customer information has
+# not occured.
+# SIMILAR RULES: sid:1125
+
+
+# NOTES: this signature looks for someone accessing the web application
+# "webfind.exe".  This application has a buffer overflow in the keywords
+# argument.  An attacker can use this vulnerability to execute arbitrary
+# code on the web server.
+
+# NOTES: this signature looks for someone accessing the file "active.log" via
+# a web server.  By allowing anyone on the internet to view the web access
+# logs, attackers can gain information about your customers that probably
+# should not be made public.
+#
+# This logfile is made available from the WebActive webserver.  This webserver
+# is no longer maintained and should be replaced with an actively maintained
+# webserver.  If converting to another webserver is not possible, remove read
+# access to this file.
+
+
+
+# NOTES: this signature looks for someone accessing the file "robots.txt" via
+# web server.  This file is used to make web spider agents (including search
+# engines) more efficient.  robots.txt is often used to inform a web spider
+# which directories that the spider should ignore because the content may be
+# dynamic or restricted.  An attacker can use this information to gain insite
+# into directories that may have been deemed sensitive.
+#
+# Verify that the robots.txt does not include any sensitive information.
+
+
+
+
+
+
+# uricontent would be nice, but we can't be sure we are running http decoding
+# on 8888.  oh for rna integration...
+
+
+# YES, the contents are logically backwards as to how the contents are seen on
+# the wire.  snort picks up the first of the longest pattern.  login=0 happens
+# MUCH less than Cookie.  so we do this for speed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# one of these days, we will have port lists...
+
+
+
+
+
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-MISC whisker HEAD/./"; flow:to_server,established; content:"HEAD/./"; classtype:attempted-recon; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; sid:1139;  rev:6;)
+
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-MISC whisker HEAD with large datagram"; content:"HEAD"; offset: 0; depth: 4; nocase;dsize:>512; flow:to_server,established,no_stream; classtype:attempted-recon;reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; sid:1171; rev:7;)
+
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-MISC whisker space splice attack"; content:"|20|"; flow:to_server,established; dsize:1; reference:arachnids,296; classtype:attempted-recon; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; sid:1104;  rev:6;)
+
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"WEB-MISC whisker tab splice attack"; dsize: <5; flow:to_server,established; content:"|09|"; reference:arachnids,415; classtype:attempted-recon; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; sid:1087; rev:6;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"ET SCAN Nikto Web App Scan in Progress"; flow:to_server,established; content:"User-Agent|3a| Mozilla/4.75 (Nikto"; fast_pattern:11,20; http_header; threshold: type both, count 5, seconds 60, track by_src; reference:url,www.cirt.net/code/nikto.shtml; reference:url,doc.emergingthreats.net/2002677; classtype:web-application-attack; sid:2002677; rev:13;)
+
+alert tcp $HTTP_SERVERS any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET SCAN Nikto Scan Remote File Include Retrieval"; flow:established,to_server; content:"/rfiinc.txt"; http_uri; content:"Host|3A| cirt.net"; http_header; nocase; reference:url,cirt.net/nikto2; classtype:web-application-activity; sid:2011390; rev:2;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS ( content: "POST"; nocase; msg: "Webmail Brute Force Attempt or Spam Attack"; threshold: type both, track by_src, count 30, seconds 60; sid:987654321; rev:1;)
